@@ -1,0 +1,41 @@
+version: '3'
+services:
+  front-tissu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./:/app/
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo-tissu
+    networks:
+      - tissuco
+
+  # MongoDB
+  mongo-tissu:
+    image: mongo
+    container_name: mongo-tissu
+    restart: always
+    ports:
+      - 27017:27017
+    command: [--auth]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - mongo-tissu:/data/db
+    networks:
+      - tissuco
+
+networks:
+  tissuco:
+    driver: bridge
+
+volumes:
+  mongo-tissu:
+    driver: local
