@@ -1,0 +1,67 @@
+.navbar {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logodiv {
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+.linklist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 10rem;
+}
+
+.navbarlink {
+    font-family: var(--font-hind);
+    font-weight: 600;
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    color: var(--red);
+    text-decoration: none;
+    margin-left: 6rem;
+}
+
+.pagelink {
+    transition-duration: 0.3s;
+}
+
+.pagelink:hover {
+    color: var(--bordeaux);
+    transition-duration: 0.3s;
+}
+
+.login {
+    background-color: var(--red);
+    color: white;
+    border-color: var(--red);
+    border-style: solid;
+    padding: 0.5rem 2rem;
+    border-radius: 0.4rem;
+    border-width: 2px;
+    transition-duration: 0.3s;
+}
+
+.login:hover {
+    background-color: white;
+    color: var(--red);
+    transition-duration: 0.3s;
+}

@@ -1,0 +1,104 @@
+.mainsection {
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mainaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    font-weight: 400;
+}
+
+.motto {
+    display: flex;
+    flex-direction: flex-start;
+    width: 17vw;
+    font-family: var(--font-montserrat);
+    font-size: 50px;
+}
+
+.registerdiv {
+    display: flex;
+    flex-direction: flex-start;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 17vw;
+}
+
+.register {
+    background-color: black;
+    color: white;
+    border-color: black;
+    padding: 0.5rem 1.5rem;
+    font-family: var(--font-hind);
+    font-size: 22px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+.register:hover {
+    background-color: white;
+    color: black;
+    transition-duration: 0.3s;
+}
+
+.vintage {
+    width: 50%;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutsection {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--beige-dark);
+}
+
+.aboutdiv {
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--beige-dark);
+    color: black;
+}
+
+.aboutfirst {
+    font-family: var(--font-montserrat);
+    font-weight: 500;
+    font-size: 30px;
+    word-wrap: break-word;
+    line-height: 150%;
+}
+
+.aboutsecond {
+    font-family: var(--font-hind);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.productsection {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

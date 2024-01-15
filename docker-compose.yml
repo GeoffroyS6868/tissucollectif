@@ -16,7 +16,6 @@ services:
     networks:
       - tissuco
 
-  # MongoDB
   mongo-tissu:
     image: mongo
     container_name: mongo-tissu
