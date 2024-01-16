@@ -1,7 +1,8 @@
 import Navbar from "../components/Navbar";
 import styles from './page.module.css';
 import Image from 'next/image';
-import wholesalevintage from '../../public/wholesalevintage.webp';
+import vintageImage from '../../public/wholesalevintage.webp';
+import ideaImage from '../../public/idea.png';
 import Link from 'next/link';
 
 export default function Home() {
@@ -18,12 +19,13 @@ export default function Home() {
             Optimize
           </div>
           <div className={styles.registerdiv}>
-            <Link href="/register" className={styles.register}>Start</Link>
+            <Link href="/register" className={styles.actionbutton}>Start</Link>
+            <Link href="#about-section" className={`${styles.actionbutton} ${styles.invert}`}>Discover</Link>
           </div>
         </div>
         <div className={styles.vintage}>
           <Image
-            src={wholesalevintage}
+            src={vintageImage}
             width={639}
             height={401}
             alt="Image of a vintage clothes"
@@ -39,7 +41,39 @@ export default function Home() {
         </div>
       </section>
       <section id="product-section" className={styles.productsection}>
-        Product
+        <div className={styles.productphrase}>
+          Secure tranquility with flexible spend management tools.
+        </div>
+        <div className={styles.productdiv}>
+          <Image
+            src={ideaImage}
+            alt="Tool image 1"
+            className={styles.toolimage}
+          />
+          <div className={styles.tooldiv}>
+            <h1>
+              Optimal Inventory Status Management
+            </h1>
+            <p>
+              Direct and control your bale's status through careful and thorough management.
+            </p>
+          </div>
+        </div>
+        <div className={styles.productdiv}>
+          <div className={styles.tooldiv}>
+            <h1>
+              Generation of Ideal Prices
+            </h1>
+            <p>
+              Our sofware generate optimal prices for your vintage clothing using your old selling data.
+            </p>
+          </div>
+          <Image
+            src={ideaImage}
+            alt="Tool image 2"
+            className={styles.toolimage}
+          />
+        </div>
       </section>
     </main>
   )

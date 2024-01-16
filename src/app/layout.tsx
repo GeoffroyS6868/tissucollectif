@@ -7,16 +7,16 @@ export const metadata: Metadata = {
     description: 'A tool to manage your sales',
 }
 
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
     subsets: ['latin'],
     variable: '--font-montserrat'
-})
+});
 
-export const hind = Hind({
+const hind = Hind({
     subsets: ['latin'],
     weight: ['300', '400', '500', '600', '700'],
     variable: '--font-hind'
-})
+});
 
 export default function RootLayout({
     children,
@@ -24,7 +24,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en" className={montserrat.className}>
+        <html lang="en" className={`${montserrat.className} ${hind}`}>
             <body>
                 {children}
             </body>

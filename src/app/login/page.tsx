@@ -3,6 +3,7 @@
 import React from "react";
 import axios from "axios";
 import { useRouter } from 'next/navigation';
+import styles from './page.module.css';
 
 const Login = () => {
     const router = useRouter();
@@ -26,18 +27,19 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <label>
-                Email
-                <input onChange={e => setEmail(e.target.value)}>
-                </input>
-            </label>
-            <label>
-                Password
-                <input onChange={e => setPassword(e.target.value)}>
-                </input>
-            </label>
-            <button onClick={onLogin}>Login</button>
+        <div className={styles.loginpage}>
+            <div className={styles.logindiv}>
+                <h1>Login</h1>
+                <div>
+                    <label>Email</label>
+                    <input onChange={e => setEmail(e.target.value)} type="email" placeholder="Enter your email" className={styles.logininput}></input>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input onChange={e => setPassword(e.target.value)} type="password" placeholder="Enter your password" className={styles.logininput}></input>
+                </div>
+                <button onClick={onLogin} className={styles.loginbutton}>Login</button>
+            </div>
         </div>
     );
 };

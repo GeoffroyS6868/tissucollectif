@@ -1,3 +1,5 @@
+"use client"
+
 import CookieChecker from "@/src/components/CookieChecker"
 import DashboardNavbar from "@/src/components/DashboardNavbar"
 

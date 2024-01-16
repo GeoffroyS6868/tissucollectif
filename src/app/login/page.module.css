@@ -1,0 +1,96 @@
+.loginpage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logindiv {
+    width: 27vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: var(--primary-black) 0px 22px 70px 4px;
+}
+
+.logindiv h1 {
+    font-family: var(--montserrat);
+    font-weight: 800;
+    font-size: 1.7vw;
+    color: var(--black);
+    margin-bottom: 4vw;
+}
+
+.logindiv div {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.logindiv label {
+    font-family: var(--font-hind);
+    font-weight: 600;
+    font-size: 1vw;
+    color: var(--black);
+    margin-bottom: 0.1vw;
+}
+
+.logininput {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-hind);
+    font-weight: 500;
+    font-size: 0.7vw;
+    height: 2vw;
+    width: 18vw;
+    border: none;
+    border-radius: 0.5vw;
+    border: solid 1.5px var(--primary-dark);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-bottom: 1vw;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.logininput[type=email]:hover,
+.logininput[type=password]:hover {
+    box-shadow: 0 0 5pt 0.5pt var(--primary-base);
+}
+
+.logininput[type=email]:focus,
+.logininput[type=password]:focus {
+    box-shadow: 0 0 5pt 2pt var(--primary-base);
+    outline-width: 0px;
+}
+
+.loginbutton {
+    margin-top: 2.5vw;
+    width: 6.5vw;
+    height: 2.7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-base);
+    border-color: var(--primary-base);
+    border-style: solid;
+    border-radius: 0.4rem;
+    border-width: 2px;
+    font-family: var(--font-hind);
+    font-weight: 500;
+    font-size: 1vw;
+    color: var(--white);
+    transition-duration: 0.3s;
+}
+
+.loginbutton:hover {
+    background-color: var(--white);
+    color: var(--primary-base);
+    transition-duration: 0.3s;
+}

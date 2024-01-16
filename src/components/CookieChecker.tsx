@@ -5,37 +5,37 @@ import axios from "axios";
 import { useRouter } from 'next/navigation';
 
 interface CookieCheckerProps {
-  children: ReactNode;
+    children: ReactNode;
 }
 
 const CookieChecker: React.FC<CookieCheckerProps> = ({ children }) => {
-  const router = useRouter();
-  const [isConnected, setIsConnected] = useState(false);
+    const router = useRouter();
+    const [isConnected, setIsConnected] = useState(false);
 
-  useEffect(() => {
-    const checkConnection = async () => {
-      try {
-        const response = await axios.get('/api/users/me'); 
+    useEffect(() => {
+        const checkConnection = async () => {
+            try {
+                const response = await axios.get('/api/users/me'); 
 
-        if (response.status === 200) {
-            setIsConnected(true);
-        } else {
-            router.push("/login");
-        }
+                if (response.status === 200) {
+                    setIsConnected(true);
+                } else {
+                    router.push("/login");
+                }
 
-      } catch (error) {
-        console.error('Error checking connection:', error);
-      }
-    };
+            } catch (error) {
+                router.push("/login");
+            }
+        };
 
-    checkConnection();
-  }, [isConnected]);
+        checkConnection();
+    }, [isConnected]);
 
-  return (
-    <>
-      {isConnected ? children : <p>Loading...</p>}
-    </>
-  );
+    return (
+        <>
+            {isConnected ? children : <p>Loading...</p>}
+        </>
+    );
 };
 
 export default CookieChecker;

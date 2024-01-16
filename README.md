@@ -11,11 +11,13 @@ Tissu Collectif is a vintage clothing management software. The application simpl
 Create a .env file which must look like this:
 
 ```
+NODE_ENV=""
 JWT_SECRET=""
 PASSWORD_KEY=""
 MONGO_USER=""
 MONGO_PASSWORD=""
 URL_MONGO=""
+URL_MONGO_TEST=""
 DB_NAME=""
 USERS_COLLECTION=""
 ```
