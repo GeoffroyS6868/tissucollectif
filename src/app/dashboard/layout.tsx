@@ -1,7 +1,8 @@
 "use client"
 
-import CookieChecker from "@/src/components/CookieChecker"
-import DashboardNavbar from "@/src/components/DashboardNavbar"
+import CookieChecker from "@/src/components/CookieChecker";
+import DashboardNavbar from "@/src/components/DashboardNavbar";
+import styles from "./layout.module.css";
 
 export default function DashboardLayout({
     children,
@@ -9,9 +10,11 @@ export default function DashboardLayout({
     children: React.ReactNode
 }) {
     return (
-        <CookieChecker>
-            <DashboardNavbar/>
-            {children}
-        </CookieChecker>
+        <div className={styles.dashboardlayout}>
+            <CookieChecker>
+                <DashboardNavbar/>
+                {children}
+            </CookieChecker>
+        </div>
     )
 }

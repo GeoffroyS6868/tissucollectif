@@ -1,5 +1,5 @@
 import { collections, connect } from "@/src/config/db";
-import { User } from "@/src/types/users";
+import { User } from "@/src/types/user";
 import { getPassword } from "@/src/utils/password";
 import { createSessionToken } from "@/src/utils/token";
 import { NextRequest, NextResponse } from "next/server";
@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({error: "Unauthorized"}, {status: 401});
         }
 
-        const token = createSessionToken(user._id);
+        const token = createSessionToken(user._id, user.contract);
 
         const response = NextResponse.json({message: "Successfully login"}, {status: 200});
 
