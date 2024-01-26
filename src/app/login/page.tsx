@@ -14,11 +14,7 @@ const Login = () => {
     const onLogin = async () => {
         try {
 
-            console.log({email: email, password: password});
-
             const response = await axios.post("/api/users/login", {email: email, password: password});
-
-            console.log(response.data);
 
             router.push("/dashboard");
         } catch (error: any) {

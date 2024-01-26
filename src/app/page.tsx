@@ -55,7 +55,7 @@ export default function Home() {
               Optimal Inventory Status Management
             </h1>
             <p>
-              Direct and control your bale's status through careful and thorough management.
+              Direct and control your bale&apos;s status through careful and thorough management.
             </p>
           </div>
         </div>

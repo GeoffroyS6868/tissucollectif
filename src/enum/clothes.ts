@@ -18,5 +18,6 @@ export enum Clothes {
     SUMMER,
     FALL,
     WINTER,
-    BRANDED
+    BRANDED,
+    VINTAGE
 }

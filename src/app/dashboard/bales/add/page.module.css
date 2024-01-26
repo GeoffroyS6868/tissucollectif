@@ -1,0 +1,208 @@
+.bales {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.balescard {
+    width: 75vw;
+    height: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.title {
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 1.5vw;
+    margin-top: 3vw;
+    margin-bottom: 5vw;
+}
+
+.subtitle {
+    width: 10vw;
+    font-family: var(--font-hind);
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+.supplierdiv {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suppliersearchdiv {
+    position: relative;
+    display: inline-block;
+}
+
+.textinput {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-hind);
+    font-weight: 400;
+    font-size: 0.8vw;
+    height: 2vw;
+    width: 18vw;
+    border-radius: 0.5vw;
+    border: solid 1.5px var(--primary-base);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+
+.textinput[type=text]:hover {
+    border: solid 1.5px var(--primary-dark);
+}
+
+.textinput[type=text]:focus {
+    border: solid 1.5px var(--black);
+    outline-width: 0px;
+    border-radius: 0.5vw 0.5vw 0 0;
+}
+
+.supplieroptions {
+    width: calc(20vw + 1.5px) ;
+    display: none;
+    position: absolute;
+    overflow: auto;
+    z-index: 1;
+}
+
+.supplieroption {
+    width: 100%;
+    height: 1vw;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    background-color: white;
+    color: var(--black);
+    border: none;
+    text-decoration: none;
+    font-family: var(--hind);
+    font-weight: 500;
+    font-size: 0.7vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border: solid;
+    border-color: var(--black);
+    border-width: 0 1.5px 1.5px 1.5px;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.supplieroption:hover {
+    background-color: var(--grey);
+}
+
+.selectdiv {
+    margin-top: 3vw;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selectinput {
+    width: 7vw;
+    height: 1.5vw;
+    color: var(--black);
+    border-radius: 0.2vw;
+    border: solid 1.5px var(--primary-base);
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.purchasedatediv {
+    width: 50%;
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dateinput {
+    width: 5vw;
+    height: 1.5vw;
+    color: var(--black);
+    border-radius: 0.2vw;
+    border: solid 1.5px var(--primary-base);
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.pricediv {
+    margin-top: 3vw;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.priceinput {
+    width: 5vw;
+    height: 1.5vw;
+    color: var(--black);
+    border-radius: 0.2vw;
+    border: solid 1.5px var(--primary-base);
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.priceinput[type=number]:hover {
+    border: solid 1.5px var(--primary-dark);
+}
+
+.priceinput[type=number]:focus {
+    border: solid 1.5px var(--black);
+    outline-width: 0px;
+}
+
+.priceinput::-webkit-outer-spin-button,
+.priceinput::-webkit-inner-spin-button {
+    display: none;
+}
+
+.createButton {
+    width: 6.5vw;
+    height: 2.2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-base);
+    color: var(--white);
+    border-color: var(--primary-base);
+    font-family: var(--font-hind);
+    font-weight: 600;
+    font-size: 1vw;
+    border-style: solid;
+    border-width: 0.15vw;
+    border-radius: 0.4rem;
+    margin-top: 5vw;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+.createButton:hover {
+    background-color: var(--white);
+    color: var(--primary-base);
+    transition-duration: 0.3s;
+}

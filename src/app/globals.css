@@ -1,11 +1,12 @@
 :root{
-  --black: #00090f;
-  --white: #f8fcff;
-  --primary-black: #011f4b;
-  --primary-dark: #03396c;
-  --primary-base: #005b96;
-  --primary-light: #6497b1;
-  --primary-white: #b3cde0;
+  --black: #030807;
+  --white: #E8F7F5;
+  --grey: #D1F0EE;
+  --primary-black: #16413D;
+  --primary-dark: #20605F;
+  --primary-base: #349D98;
+  --primary-light: #3EBBB3;
+  --primary-white: #85D6B7;
 }
 
 * {

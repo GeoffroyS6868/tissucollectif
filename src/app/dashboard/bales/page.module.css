@@ -1,0 +1,113 @@
+.bales {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.balescard {
+    width: 75vw;
+    height: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.balescardheader {
+    width: 70vw;
+    height: 4vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2vw;
+}
+
+.balescardheadertitlediv {
+    width: 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+.balescardheaderactions {
+    width: 9vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.actionlink {
+    width: 6.5vw;
+    height: 2.2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-base);
+    color: var(--white);
+    border-color: var(--primary-base);
+    font-family: var(--font-hind);
+    font-weight: 600;
+    font-size: 1vw;
+    border-style: solid;
+    border-width: 0.15vw;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+.actionlink:hover {
+    background-color: var(--white);
+    color: var(--primary-base);
+    transition-duration: 0.3s;
+}
+
+.balestable {
+    width: 100%;
+    height: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3% 0%;
+    border-radius: 1vw;
+}
+
+.tableheader {
+    width: 100%;
+    height: 3vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--grey);
+    margin-bottom: 2vw;
+}
+
+.tableheadercolumn {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+    font-size: 1.2vw;
+}

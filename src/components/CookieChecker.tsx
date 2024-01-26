@@ -29,7 +29,7 @@ const CookieChecker: React.FC<CookieCheckerProps> = ({ children }) => {
         };
 
         checkConnection();
-    }, [isConnected]);
+    }, [isConnected, router]);
 
     return (
         <>

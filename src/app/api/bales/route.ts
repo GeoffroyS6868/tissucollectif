@@ -1,6 +1,8 @@
 import { collections, connect } from "@/src/config/db";
 import { Bale, BaleCreate } from "@/src/types/bale";
+import { Supplier } from "@/src/types/supplier";
 import { isValidCookie } from "@/src/utils/token";
+import { ObjectId } from "mongodb";
 import { NextRequest, NextResponse } from "next/server";
 
 function checkNewBale(bale: BaleCreate): boolean {
@@ -42,11 +44,18 @@ export async function POST(request: NextRequest) {
                 return NextResponse.json({ error: "supplier, purchaseDate, price, type and wear should be defined" }, { status: 400 });
             }
 
+            const supplier: Supplier | null = await collections.suppliers!.findOne<Supplier>({_id: new ObjectId(newBale.supplier)});
+
+            if (supplier === null) {
+                return NextResponse.json({ error: "Supplier doesn't exist" }, { status: 400 });
+            }
+
             const bale: BaleCreate = {
                 contract: token.contract!,
                 purchaseDate: newBale.purchaseDate!,
                 saleDate: newBale.saleDate || "",
                 supplier: newBale.supplier!,
+                supplierName: supplier.name,
                 price: newBale.price!,
                 type: newBale.type!,
                 wear: newBale.wear!,

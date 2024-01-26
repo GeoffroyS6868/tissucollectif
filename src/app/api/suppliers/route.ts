@@ -67,9 +67,23 @@ export async function GET(request: NextRequest) {
 
         await connect();
 
-        if (await isValidCookie(request.cookies.get("tissucookie")?.value)) {
+        const {isValid, token} =  await isValidCookie(request.cookies.get("tissucookie")?.value);
 
-            
+        if (isValid) {
+
+            const name: string | null = request.nextUrl.searchParams.get("name");
+
+            if (name !== null) {
+
+                const suppliers = await collections.suppliers!.find<Supplier>({ name: { $regex: new RegExp(name, 'i') }, contract: token.contract }).toArray();
+
+                return NextResponse.json({ suppliers: suppliers }, { status: 200 });
+
+            }
+
+            const suppliers = await collections.suppliers!.find<Supplier>({}).toArray();
+
+            return NextResponse.json({ suppliers: suppliers }, { status: 200 });
 
         } else {
 
