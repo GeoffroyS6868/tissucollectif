@@ -1,14 +1,17 @@
 "use client"
 
-import React, { LegacyRef } from 'react';
+import React from 'react';
+import axios from 'axios';
 import styles from './page.module.css';
 import { Clothes } from '@/src/enum/clothes';
 import { Wear } from '@/src/enum/wear';
-import axios from 'axios';
 import { Supplier } from '@/src/types/supplier';
 import { typeToString, wearToString } from '@/src/utils/enumToString';
+import { useRouter } from 'next/navigation';
 
 export default function Page() {
+
+    const router = useRouter();
 
     const [supplier, setSupplier] = React.useState<string>("");
     const [supplierSearch, setSupplierSearch] = React.useState("");
@@ -67,21 +70,19 @@ export default function Page() {
                 return;
             }
 
-            console.log({
-                supplier: supplier,
-                wear: wear,
-                type: clothesType,
-                purchaseDate: new Date(purchaseDate),
-                price: price
-            })
-
-            /*const response = await axios.post("/api/bales", {
+            const response = await axios.post("/api/bales", {
                 supplier: supplier,
                 wear: wear,
                 type: clothesType,
                 purchaseDate: purchaseDate,
                 price: price
-            });*/
+            });
+
+            const data = response.data as {message?: string, id?: string};
+
+            if (data.message && data.id) {
+                router.push("/dashboard/bales");
+            }
 
         } catch (error: any) {
             console.log(error.message);

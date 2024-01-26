@@ -88,7 +88,7 @@
     height: 1vw;
     display: flex;
     justify-content: left;
-    align-items: start;
+    align-items: flex-start;
     background-color: white;
     color: var(--black);
     border: none;
