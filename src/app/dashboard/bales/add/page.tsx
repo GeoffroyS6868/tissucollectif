@@ -134,7 +134,7 @@ export default function Page() {
                 </div>
                 <div className={styles.purchasedatediv}>
                     <label className={styles.subtitle}>Purchase date</label>
-                    <input id='purchase-date' type='date' onChange={(e) => {setPurchaseDate(e.target.value)}} className={styles.dateinput}></input>
+                    <input id='purchase-date' type='date' onChange={(e) => {setPurchaseDate(new Date(e.target.value).toISOString())}} className={styles.dateinput}></input>
                 </div>
                 <div className={styles.pricediv}>
                     <label className={styles.subtitle}>Price</label>

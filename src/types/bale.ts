@@ -27,6 +27,19 @@ export type BaleCreate = {
     pricePer?: number;
 }
 
+export type BaleEdit = {
+    id?: string;
+    contract?: string;
+    purchaseDate?: string;
+    saleDate?: string;
+    supplier?: string;
+    supplierName?: string;
+    price?: number;
+    type?: Clothes;
+    wear?: Wear;
+    pricePer?: number;
+}
+
 export type BalesListRow = {
     _id: string;
     purchaseDate: string;
@@ -35,3 +48,5 @@ export type BalesListRow = {
     wear: Wear;
     type: Clothes;
 }
+
+export type NoUndefinedField<T> = { [P in keyof T]-?: NoUndefinedField<NonNullable<T[P]>> };

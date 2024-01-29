@@ -20,12 +20,46 @@
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
+.header {
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3vw;
+    margin-bottom: 5vw;
+}
+
 .title {
     font-family: var(--font-montserrat);
     font-weight: 700;
     font-size: 1.5vw;
-    margin-top: 3vw;
-    margin-bottom: 5vw;
+    margin-left: 3vw;
+}
+
+.deletebutton {
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border: none;
+    border-radius: 0.3vw;
+    margin-right: 3vw;
+}
+
+.deletebutton:hover {
+    width: 3.2vw;
+    height: 3.2vw;
+    margin-right: 2.9vw;
+}
+
+.icon {
+    width: 80%;
+    height: 80%;
 }
 
 .subtitle {
@@ -181,7 +215,7 @@
     display: none;
 }
 
-.createButton {
+.editButton {
     width: 6.5vw;
     height: 2.2vw;
     display: flex;
@@ -202,7 +236,7 @@
     transition-duration: 0.3s;
 }
 
-.createButton:hover {
+.editButton:hover {
     background-color: var(--white);
     color: var(--primary-base);
     transition-duration: 0.3s;
