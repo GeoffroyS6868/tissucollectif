@@ -25,16 +25,9 @@ BALES_COLLECTION=""
 SUPPLIERS_COLLECTION=""
 ```
 
-## Launching
+## Build
 
-Launch the project with Docker.
-
-Use
-
-```
-docker-compose up --build -d
-```
-or
+Launch the project with Docker using
 
 ```
 docker compose up --build -d
