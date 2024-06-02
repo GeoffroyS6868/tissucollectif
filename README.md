@@ -1,4 +1,4 @@
-# Tissu Collectif
+# Tissu Collectif [Work in progress]
 
 Welcome to Tissu Collectif Repository 🚀
 
