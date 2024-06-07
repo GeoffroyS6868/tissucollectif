@@ -8,23 +8,20 @@
 }
 
 .logindiv {
-    width: 27vw;
-    height: 30vw;
+    width: 30vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: var(--white);
-    border-radius: 2rem;
-    box-shadow: var(--maindark) 0px 22px 70px 4px;
+    border-radius: 1vw;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .logindiv h1 {
+    color: var(--black);
     font-family: var(--montserrat);
     font-weight: 800;
-    font-size: 1.7vw;
-    color: var(--black);
-    margin-bottom: 4vw;
+    font-size: 2vw;
+    margin: 4vw 0;
 }
 
 .logindiv div {
@@ -36,22 +33,22 @@
 .logindiv label {
     font-family: var(--font-hind);
     font-weight: 600;
-    font-size: 1vw;
+    font-size: 1.1vw;
     color: var(--black);
     margin-bottom: 0.1vw;
 }
 
 .logininput {
+    height: 2vw;
+    width: 20vw;
     display: flex;
     flex-direction: row;
     font-family: var(--font-hind);
     font-weight: 500;
     font-size: 0.7vw;
-    height: 2vw;
-    width: 18vw;
     border: none;
     border-radius: 0.5vw;
-    border: solid 1.5px var(--maindark);
+    border: solid 1.5px var(--white-darker);
     padding-left: 1vw;
     padding-right: 1vw;
     margin-bottom: 1vw;
@@ -59,34 +56,30 @@
     transition: 1s;
 }
 
-.logininput[type=email]:hover,
-.logininput[type=password]:hover {
-    box-shadow: 0 0 5pt 0.5pt var(--maincolor);
-}
-
 .logininput[type=email]:focus,
 .logininput[type=password]:focus {
-    box-shadow: 0 0 5pt 2pt var(--maincolor);
     outline-width: 0px;
 }
 
 .loginbutton {
-    margin-top: 2.5vw;
-    width: 6.5vw;
-    height: 2.7vw;
+    width: 7vw;
+    height: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--maincolor);
+    color: var(--white);
+    font-family: var(--font-hind);
+    font-size: 1.3vw;
+    font-weight: 500;
     border-color: var(--maincolor);
     border-style: solid;
-    border-radius: 0.4rem;
-    border-width: 2px;
-    font-family: var(--font-hind);
-    font-weight: 500;
-    font-size: 1vw;
-    color: var(--white);
+    border-radius: 0.4vw;
+    border-width: 0.15vw;
+    margin-top: 3vw;
+    margin-bottom: 4vw;
     transition-duration: 0.3s;
+    cursor: pointer;
 }
 
 .loginbutton:hover {

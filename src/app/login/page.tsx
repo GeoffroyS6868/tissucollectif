@@ -16,6 +16,10 @@ const Login = () => {
 
             const response = await axios.post("/api/users/login", {email: email, password: password});
 
+            if (response.status != 200) {
+                return;
+            }
+
             router.push("/dashboard");
         } catch (error: any) {
             console.log(error.message);
