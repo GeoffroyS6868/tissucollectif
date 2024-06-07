@@ -16,7 +16,7 @@
     align-items: center;
     background-color: var(--white);
     border-radius: 2rem;
-    box-shadow: var(--primary-black) 0px 22px 70px 4px;
+    box-shadow: var(--maindark) 0px 22px 70px 4px;
 }
 
 .logindiv h1 {
@@ -51,7 +51,7 @@
     width: 18vw;
     border: none;
     border-radius: 0.5vw;
-    border: solid 1.5px var(--primary-dark);
+    border: solid 1.5px var(--maindark);
     padding-left: 1vw;
     padding-right: 1vw;
     margin-bottom: 1vw;
@@ -61,12 +61,12 @@
 
 .logininput[type=email]:hover,
 .logininput[type=password]:hover {
-    box-shadow: 0 0 5pt 0.5pt var(--primary-base);
+    box-shadow: 0 0 5pt 0.5pt var(--maincolor);
 }
 
 .logininput[type=email]:focus,
 .logininput[type=password]:focus {
-    box-shadow: 0 0 5pt 2pt var(--primary-base);
+    box-shadow: 0 0 5pt 2pt var(--maincolor);
     outline-width: 0px;
 }
 
@@ -77,8 +77,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-base);
-    border-color: var(--primary-base);
+    background-color: var(--maincolor);
+    border-color: var(--maincolor);
     border-style: solid;
     border-radius: 0.4rem;
     border-width: 2px;
@@ -91,6 +91,6 @@
 
 .loginbutton:hover {
     background-color: var(--white);
-    color: var(--primary-base);
+    color: var(--maincolor);
     transition-duration: 0.3s;
 }

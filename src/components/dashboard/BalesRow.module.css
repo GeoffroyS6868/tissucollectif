@@ -34,7 +34,7 @@
 }
 
 .editlink:hover {
-    background-color: var(--grey);
+    background-color: var(--white-darker);
     transition-duration: 0.3s;
 }
 

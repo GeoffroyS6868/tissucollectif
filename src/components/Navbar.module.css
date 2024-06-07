@@ -7,37 +7,22 @@
     justify-content: space-between;
 }
 
-.logodiv {
-    padding-left: 3rem;
-    display: flex;
-    flex-direction: row;
-}
-
-.logo {
-    font-family: var(--font-montserrat);
-    font-weight: 700;
-    font-size: 30px;
-    color: var(--black);
-    text-decoration: none;
-}
-
 .linklist {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-right: 10rem;
 }
 
 .navbarlink {
     font-family: var(--font-hind);
     font-weight: 600;
-    font-size: 22px;
+    font-size: 1.5vw;
     display: flex;
     flex-direction: row;
-    color: var(--primary-base);
+    color: var(--maincolor);
     text-decoration: none;
-    margin-left: 6rem;
+    margin: 0 2vw;
 }
 
 .pagelink {
@@ -45,14 +30,15 @@
 }
 
 .pagelink:hover {
-    color: var(--primary-black);
+    color: var(--maindark);
     transition-duration: 0.3s;
 }
 
 .login {
-    background-color: var(--primary-base);
+    background-color: var(--maincolor);
     color: var(--white);
-    border-color: var(--primary-base);
+    font-size: 1.5vw;
+    border-color: var(--maincolor);
     border-style: solid;
     padding: 0.5rem 2rem;
     border-radius: 0.4rem;
@@ -62,6 +48,6 @@
 
 .login:hover {
     background-color: var(--white);
-    color: var(--primary-base);
+    color: var(--maincolor);
     transition-duration: 0.3s;
 }

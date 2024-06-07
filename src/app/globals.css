@@ -1,12 +1,12 @@
 :root{
-  --black: #030807;
-  --white: #E8F7F5;
-  --grey: #D1F0EE;
-  --primary-black: #16413D;
-  --primary-dark: #20605F;
-  --primary-base: #349D98;
-  --primary-light: #3EBBB3;
-  --primary-white: #85D6B7;
+  --black: #0a1128;
+  --white: #e7e7ea;
+  --white-shadow: #e2e2e6;
+  --white-hover: #d8d8dd;
+  --white-darker: #b6b8bf;
+  --maindark: #023360;
+  --maincolor: #1c5386;
+  --mainlight: #4f79a1;
 }
 
 * {

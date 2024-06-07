@@ -91,7 +91,7 @@
     height: 2vw;
     width: 18vw;
     border-radius: 0.5vw;
-    border: solid 1.5px var(--primary-base);
+    border: solid 1.5px var(--maincolor);
     padding-left: 1vw;
     padding-right: 1vw;
     -webkit-transition: 1s;
@@ -100,7 +100,7 @@
 
 
 .textinput[type=text]:hover {
-    border: solid 1.5px var(--primary-dark);
+    border: solid 1.5px var(--maindark);
 }
 
 .textinput[type=text]:focus {
@@ -140,7 +140,7 @@
 }
 
 .supplieroption:hover {
-    background-color: var(--grey);
+    background-color: var(--white-darker);
 }
 
 .selectdiv {
@@ -157,7 +157,7 @@
     height: 1.5vw;
     color: var(--black);
     border-radius: 0.2vw;
-    border: solid 1.5px var(--primary-base);
+    border: solid 1.5px var(--maincolor);
     padding-left: 1vw;
     padding-right: 1vw;
 }
@@ -177,7 +177,7 @@
     font-size: 0.8vw;
     color: var(--black);
     border-radius: 0.2vw;
-    border: solid 1.5px var(--primary-base);
+    border: solid 1.5px var(--maincolor);
     padding-left: 1vw;
     padding-right: 1vw;
 }
@@ -196,13 +196,13 @@
     height: 1.5vw;
     color: var(--black);
     border-radius: 0.2vw;
-    border: solid 1.5px var(--primary-base);
+    border: solid 1.5px var(--maincolor);
     padding-left: 1vw;
     padding-right: 1vw;
 }
 
 .priceinput[type=number]:hover {
-    border: solid 1.5px var(--primary-dark);
+    border: solid 1.5px var(--maindark);
 }
 
 .priceinput[type=number]:focus {
@@ -222,9 +222,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-base);
+    background-color: var(--maincolor);
     color: var(--white);
-    border-color: var(--primary-base);
+    border-color: var(--maincolor);
     font-family: var(--font-hind);
     font-weight: 600;
     font-size: 1vw;
@@ -238,6 +238,6 @@
 
 .editButton:hover {
     background-color: var(--white);
-    color: var(--primary-base);
+    color: var(--maincolor);
     transition-duration: 0.3s;
 }

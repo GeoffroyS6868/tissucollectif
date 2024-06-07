@@ -10,6 +10,32 @@ function getDbUrl(): string {
     return process.env.URL_MONGO_TEST || "";
 }
 
+async function doesCollectionExist(collectionsList: mongoDB.CollectionInfo[], collectionName: string): Promise<boolean> {
+    for (let i = 0; i < collectionsList.length; i += 1) {
+        if (collectionsList[i].name === collectionName)
+            return true;
+    }
+    return false;
+}
+
+async function createCollectionsIfNotExist(db: mongoDB.Db, collectionsList: (mongoDB.CollectionInfo | Pick<mongoDB.CollectionInfo, "name" | "type">)[]) {
+    if (await doesCollectionExist(collectionsList, process.env.USERS_COLLECTION!) === false) {
+        await db.createCollection(process.env.USERS_COLLECTION!);
+    }
+
+    if (await doesCollectionExist(collectionsList, process.env.CONTRACTS_COLLECTION!) === false) {
+        await db.createCollection(process.env.CONTRACTS_COLLECTION!);
+    }
+
+    if (await doesCollectionExist(collectionsList, process.env.BALES_COLLECTION!) === false) {
+        await db.createCollection(process.env.BALES_COLLECTION!);
+    }
+
+    if (await doesCollectionExist(collectionsList, process.env.SUPPLIERS_COLLECTION!) === false) {
+        await db.createCollection(process.env.SUPPLIERS_COLLECTION!);
+    }
+}
+
 export async function connect() {
 
     if (collections.users !== undefined) {
@@ -25,6 +51,9 @@ export async function connect() {
     await client.connect();
 
     const db: mongoDB.Db = client.db(process.env.DB_NAME!);
+
+    const collectionsList = await db.listCollections().toArray();
+    await createCollectionsIfNotExist(db, collectionsList);
 
     const usersCollection: mongoDB.Collection = db.collection(process.env.USERS_COLLECTION!);
     collections.users = usersCollection;

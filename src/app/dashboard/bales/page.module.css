@@ -59,9 +59,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-base);
+    background-color: var(--maincolor);
     color: var(--white);
-    border-color: var(--primary-base);
+    border-color: var(--maincolor);
     font-family: var(--font-hind);
     font-weight: 600;
     font-size: 1vw;
@@ -74,7 +74,7 @@
 
 .actionlink:hover {
     background-color: var(--white);
-    color: var(--primary-base);
+    color: var(--maincolor);
     transition-duration: 0.3s;
 }
 
@@ -95,7 +95,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--grey);
+    background-color: var(--white-darker);
     margin-bottom: 2vw;
 }
 
