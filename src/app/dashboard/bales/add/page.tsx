@@ -91,58 +91,56 @@ export default function Page() {
 
     return (
         <div className={styles.bales}>
-            <div className={styles.balescard}>
-                <h1 className={styles.title}>Create a Bale</h1>
-                <div className={styles.supplierdiv}>
-                    <label className={styles.subtitle}>Supplier</label>
-                    <div className={styles.suppliersearchdiv}>
-                        <input type='text' value={supplierSearch} onChange={(e) => setSupplierSearch(e.target.value)} className={styles.textinput} onFocus={() => {supplierToggleFocus(true)}}/>
-                        <div ref={supplierOptionDiv} className={styles.supplieroptions}>
-                            {
-                                suppliersOptions.map((option) => {
-                                    return (<button onClick={(e) => updateSupplier(option._id!, option.name).then(() => {supplierToggleFocus(false)})} key={option._id} className={styles.supplieroption}>{option.name}</button>)
-                                })
-                            }
-                        </div>
+            <h1 className={styles.title}>Create a Bale</h1>
+            <div className={styles.supplierdiv}>
+                <label className={styles.subtitle}>Supplier</label>
+                <div className={styles.suppliersearchdiv}>
+                    <input type='text' value={supplierSearch} onChange={(e) => setSupplierSearch(e.target.value)} className={styles.textinput} onFocus={() => {supplierToggleFocus(true)}}/>
+                    <div ref={supplierOptionDiv} className={styles.supplieroptions}>
+                        {
+                            suppliersOptions.map((option) => {
+                                return (<button onClick={(e) => updateSupplier(option._id!, option.name).then(() => {supplierToggleFocus(false)})} key={option._id} className={styles.supplieroption}>{option.name}</button>)
+                            })
+                        }
                     </div>
                 </div>
-                <div className={styles.selectdiv}>
-                    <label className={styles.subtitle}>Wear</label>
-                    <select name='wear' id='wear-select' onChange={(e) => {setWear(Number(e.target.value))}} className={styles.selectinput}>
-                        {
-                            Object.values(Wear).map((wear) => {
-                                if (typeof wear === 'string') {
-                                    return;
-                                }
-                                return <option value={wear.toString()} key={wearToString(wear)}>{wearToString(wear)}</option>
-                            })
-                        }
-                    </select>
-                </div>
-                <div className={styles.selectdiv}>
-                    <label className={styles.subtitle}>Type of clothing</label>
-                    <select name='clothes-type' id='clothes-type-select' onChange={(e) => {setClothesType(Number(e.target.value))}} className={styles.selectinput}>
-                        {
-                            Object.values(Clothes).map((clothesType) => {
-                                if (typeof clothesType === 'string') {
-                                    return;
-                                }
-                                return <option value={clothesType.toString()} key={typeToString(clothesType)}>{typeToString(clothesType)}</option>
-                            })
-                        }
-                    </select>
-                </div>
-                <div className={styles.purchasedatediv}>
-                    <label className={styles.subtitle}>Purchase date</label>
-                    <input id='purchase-date' type='date' onChange={(e) => {setPurchaseDate(new Date(e.target.value).toISOString())}} className={styles.dateinput}></input>
-                </div>
-                <div className={styles.pricediv}>
-                    <label className={styles.subtitle}>Price</label>
-                    <input id='price' type='number' onChange={(e) => {setPrice(Number(e.target.value))}} className={styles.priceinput}></input>
-                </div>
-                <div>
-                    <button onClick={createBale} className={styles.createButton}>Create</button>
-                </div>
+            </div>
+            <div className={styles.selectdiv}>
+                <label className={styles.subtitle}>Wear</label>
+                <select name='wear' id='wear-select' onChange={(e) => {setWear(Number(e.target.value))}} className={styles.selectinput}>
+                    {
+                        Object.values(Wear).map((wear) => {
+                            if (typeof wear === 'string') {
+                                return;
+                            }
+                            return <option value={wear.toString()} key={wearToString(wear)}>{wearToString(wear)}</option>
+                        })
+                    }
+                </select>
+            </div>
+            <div className={styles.selectdiv}>
+                <label className={styles.subtitle}>Type of clothing</label>
+                <select name='clothes-type' id='clothes-type-select' onChange={(e) => {setClothesType(Number(e.target.value))}} className={styles.selectinput}>
+                    {
+                        Object.values(Clothes).map((clothesType) => {
+                            if (typeof clothesType === 'string') {
+                                return;
+                            }
+                            return <option value={clothesType.toString()} key={typeToString(clothesType)}>{typeToString(clothesType)}</option>
+                        })
+                    }
+                </select>
+            </div>
+            <div className={styles.purchasedatediv}>
+                <label className={styles.subtitle}>Purchase date</label>
+                <input id='purchase-date' type='date' onChange={(e) => {setPurchaseDate(new Date(e.target.value).toISOString())}} className={styles.dateinput}></input>
+            </div>
+            <div className={styles.pricediv}>
+                <label className={styles.subtitle}>Price</label>
+                <input id='price' type='number' onChange={(e) => {setPrice(Number(e.target.value))}} className={styles.priceinput}></input>
+            </div>
+            <div>
+                <button onClick={createBale} className={styles.createButton}>Create</button>
             </div>
         </div>
     )

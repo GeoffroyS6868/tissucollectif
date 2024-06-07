@@ -8,18 +8,6 @@
     background-color: var(--white);
 }
 
-.balescard {
-    width: 75vw;
-    height: 45vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: var(--white);
-    border-radius: 1vw;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
-
 .title {
     font-family: var(--font-montserrat);
     font-weight: 700;

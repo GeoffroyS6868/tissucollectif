@@ -28,42 +28,36 @@ export default function Bales() {
 
     return (
         <div className={styles.bales}>
-            <div className={styles.balescard}>
-                <div className={styles.balescardheader}>
-                    <div className={styles.balescardheadertitlediv}>
-                        <h1 className={styles.title}>Bales</h1>
+            <div className={styles.balesheader}>
+                <h1 className={styles.title}>Bales</h1>
+                <Link href="/dashboard/bales/add" className={styles.actionlink}>Add Bale</Link>
+            </div>
+            <div className={styles.balestable}>
+                <div className={styles.tableheader}>
+                    <div className={styles.tableheadercolumn}>
+                        Purchase date
                     </div>
-                    <div className={styles.balescardheaderactions}>
-                        <Link href="/dashboard/bales/add" className={styles.actionlink}>Add Bale</Link>
+                    <div className={styles.tableheadercolumn}>
+                        Supplier
+                    </div>
+                    <div className={styles.tableheadercolumn}>
+                        Price
+                    </div>
+                    <div className={styles.tableheadercolumn}>
+                        Type
+                    </div>
+                    <div className={styles.tableheadercolumn}>
+                        Wear
+                    </div>
+                    <div className={styles.tableheadercolumn}>
+                        Actions
                     </div>
                 </div>
-                <div className={styles.balestable}>
-                    <div className={styles.tableheader}>
-                        <div className={styles.tableheadercolumn}>
-                            Purchase date
-                        </div>
-                        <div className={styles.tableheadercolumn}>
-                            Supplier
-                        </div>
-                        <div className={styles.tableheadercolumn}>
-                            Price
-                        </div>
-                        <div className={styles.tableheadercolumn}>
-                            Type
-                        </div>
-                        <div className={styles.tableheadercolumn}>
-                            Wear
-                        </div>
-                        <div className={styles.tableheadercolumn}>
-                            Actions
-                        </div>
-                    </div>
-                    {
-                        bales.map((bale: Bale) => (
-                            <BalesRow key={bale._id} bale={bale} />
-                        ))
-                    }
-                </div>
+                {
+                    bales.map((bale: Bale) => (
+                        <BalesRow key={bale._id} bale={bale} />
+                    ))
+                }
             </div>
         </div>
     )
