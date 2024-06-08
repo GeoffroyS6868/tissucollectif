@@ -17,27 +17,22 @@ export default function BalesRow(props: {bale: BalesListRow}) {
     };
 
     return (
-        <div className={styles.balesrow}>
-            <div className={styles.balesrowcomponent}>
-                {new Intl.DateTimeFormat('fr', dateOptions).format(new Date(props.bale.purchaseDate))}
-            </div>
-            <div className={styles.balesrowcomponent}>
+        <Link href={"/dashboard/bales/" + props.bale._id} className={styles.balesrow}>
+            <div className={`${styles.balesrowcomponent} ${styles.rowlong}`}>
                 {props.bale.supplierName}
             </div>
-            <div className={styles.balesrowcomponent}>
+            <div className={`${styles.balesrowcomponent} ${styles.rowmid}`}>
                 {props.bale.price.toFixed(2)+'€'}
             </div>
-            <div className={styles.balesrowcomponent}>
+            <div className={`${styles.balesrowcomponent} ${styles.rowshort}`}>
                 {typeToString(props.bale.type)}
             </div>
-            <div className={styles.balesrowcomponent}>
+            <div className={`${styles.balesrowcomponent} ${styles.rowshort}`}>
                 {wearToString(props.bale.wear)}
             </div>
-            <div className={styles.balesrowcomponent}>
-                <Link href={"/dashboard/bales/edit/" + props.bale._id} className={styles.editlink}>
-                    <Image src={edit} alt="Edit icon" className={styles.editicon}/>
-                </Link>
+            <div className={`${styles.balesrowcomponent} ${styles.rowshort}`}>
+                {new Intl.DateTimeFormat('fr', dateOptions).format(new Date(props.bale.purchaseDate))}
             </div>
-        </div>
+        </Link>
     )
 }

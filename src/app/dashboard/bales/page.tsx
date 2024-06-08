@@ -33,26 +33,6 @@ export default function Bales() {
                 <Link href="/dashboard/bales/add" className={styles.actionlink}>Add Bale</Link>
             </div>
             <div className={styles.balestable}>
-                <div className={styles.tableheader}>
-                    <div className={styles.tableheadercolumn}>
-                        Purchase date
-                    </div>
-                    <div className={styles.tableheadercolumn}>
-                        Supplier
-                    </div>
-                    <div className={styles.tableheadercolumn}>
-                        Price
-                    </div>
-                    <div className={styles.tableheadercolumn}>
-                        Type
-                    </div>
-                    <div className={styles.tableheadercolumn}>
-                        Wear
-                    </div>
-                    <div className={styles.tableheadercolumn}>
-                        Actions
-                    </div>
-                </div>
                 {
                     bales.map((bale: Bale) => (
                         <BalesRow key={bale._id} bale={bale} />

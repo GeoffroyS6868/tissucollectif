@@ -1,0 +1,86 @@
+.suppliers {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.title {
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 1.5vw;
+    margin-bottom: 4vw;
+}
+
+.inputdiv {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5vw 0;
+}
+
+.subtitle {
+    width: 10vw;
+    font-family: var(--font-hind);
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+.textinput {
+    height: 2vw;
+    width: 18vw;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+    font-family: var(--font-hind);
+    font-weight: 400;
+    font-size: 0.8vw;
+    border-radius: 0.5vw;
+    border: solid 1.5px var(--maincolor);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.textinput[type=text]:hover {
+    border: solid 1.5px var(--maindark);
+}
+
+.textinput[type=text]:focus {
+    border: solid 1.5px var(--black);
+    outline-width: 0px;
+}
+
+.createButton {
+    width: 6.5vw;
+    height: 2.2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--maincolor);
+    color: var(--white);
+    border-color: var(--maincolor);
+    font-family: var(--font-hind);
+    font-weight: 600;
+    font-size: 1vw;
+    border-style: solid;
+    border-width: 0.15vw;
+    border-radius: 0.4vw;
+    margin-top: 4vw;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.createButton:hover {
+    background-color: var(--white);
+    color: var(--maincolor);
+    transition-duration: 0.3s;
+}

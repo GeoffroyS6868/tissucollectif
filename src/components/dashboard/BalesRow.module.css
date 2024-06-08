@@ -4,41 +4,35 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--white);
-    border-radius: 0.5vw;
+    text-decoration: none;
+    border-bottom: 1px solid var(--white-hover);
+}
+
+.balesrow:hover {
+    background-color: var(--white-shadow);
 }
 
 .balesrowcomponent {
     height: 100%;
-    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     color: var(--black);
     font-family: var(--font-hind);
     font-weight: 400;
     font-size: 0.8vw;
+    padding: 1vw;
 }
 
-.editlink {
-    width: 2.5vw;
-    height: 2.5vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white);
-    border-radius: 0.2vw;
-    transition-duration: 0.3s;
+.rowlong {
+    width: 35%;
 }
 
-.editlink:hover {
-    background-color: var(--white-darker);
-    transition-duration: 0.3s;
+.rowmid {
+    width: 20%;
 }
 
-.editicon {
-    width: 1.5vw;
-    height: auto;
+.rowshort {
+    width: 15%;
 }
