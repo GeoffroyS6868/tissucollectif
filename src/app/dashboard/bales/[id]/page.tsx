@@ -27,9 +27,16 @@ export default function Page() {
     }, [params.id]);
 
     return (
-        <div>
+        <div className={styles.balediv}>
             { bale !== undefined ? (
-                <div>{bale.price.toString()}</div>
+                <div className={styles.infocard}>
+                    <div className={styles.cardtitle}>
+                        Bale from {bale.supplierName}
+                    </div>
+                    <div>
+                        {bale.price.toString()}
+                    </div>
+                </div>
                 ) : (
                 <div></div>
                 )
