@@ -81,7 +81,7 @@ export async function GET(request: NextRequest) {
 
             }
 
-            const suppliers = await collections.suppliers!.find<Supplier>({}).toArray();
+            const suppliers = await collections.suppliers!.find<Supplier>({contract: token.contract}).toArray();
 
             return NextResponse.json({ suppliers: suppliers }, { status: 200 });
 

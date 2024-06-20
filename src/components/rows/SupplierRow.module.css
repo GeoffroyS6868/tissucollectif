@@ -1,0 +1,38 @@
+.suppliersrow {
+    width: 100%;
+    height: 3vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    border-bottom: 1px solid var(--white-hover);
+}
+
+.suppliersrow:hover {
+    background-color: var(--white-shadow);
+}
+
+.suppliersrowcomponent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--black);
+    font-family: var(--font-hind);
+    font-weight: 400;
+    font-size: 0.8vw;
+    padding: 1vw;
+}
+
+.rowlong {
+    width: 35%;
+}
+
+.rowmid {
+    width: 20%;
+}
+
+.rowshort {
+    width: 15%;
+}

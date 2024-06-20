@@ -25,7 +25,7 @@ BALES_COLLECTION=""
 SUPPLIERS_COLLECTION=""
 ```
 
-## Build
+## Usage
 
 Launch the project with Docker using
 

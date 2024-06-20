@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from './page.module.css';
 import { Bale } from '@/src/types/bale';
-import BalesRow from '@/src/components/dashboard/BalesRow';
+import BalesRow from '@/src/components/rows/BalesRow';
 import axios from 'axios';
 import Link from 'next/link';
 
