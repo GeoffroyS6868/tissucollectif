@@ -1,6 +1,7 @@
 import { collections, connect } from "@/src/config/db";
 import { Supplier, SupplierCreate } from "@/src/types/supplier";
 import { isValidCookie } from "@/src/utils/token";
+import { ObjectId } from "mongodb";
 import { NextRequest, NextResponse } from "next/server";
 
 function checkNewSupplier(supplier: SupplierCreate): boolean {
@@ -78,6 +79,16 @@ export async function GET(request: NextRequest) {
                 const suppliers = await collections.suppliers!.find<Supplier>({ name: { $regex: new RegExp(name, 'i') }, contract: token.contract }).toArray();
 
                 return NextResponse.json({ suppliers: suppliers }, { status: 200 });
+
+            }
+
+            const id: string | null = request.nextUrl.searchParams.get("id");
+
+            if (id !== null) {
+
+                const supplier = await collections.suppliers!.findOne<Supplier>({ _id: new ObjectId(id), contract: token.contract });
+
+                return NextResponse.json({ supplier: supplier }, { status: 200 });
 
             }
 
