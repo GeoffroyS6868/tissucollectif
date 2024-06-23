@@ -48,5 +48,3 @@ export type BalesListRow = {
     wear: Wear;
     type: Clothes;
 }
-
-export type NoUndefinedField<T> = { [P in keyof T]-?: NoUndefinedField<NonNullable<T[P]>> };

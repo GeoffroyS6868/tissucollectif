@@ -1,9 +1,25 @@
 import { collections, connect } from "@/src/config/db";
-import { Bale, BaleCreate, BaleEdit, NoUndefinedField } from "@/src/types/bale";
+import { Bale, BaleCreate, BaleEdit } from "@/src/types/bale";
 import { Supplier } from "@/src/types/supplier";
 import { isValidCookie } from "@/src/utils/token";
 import { ObjectId } from "mongodb";
 import { NextRequest, NextResponse } from "next/server";
+
+interface BaleMongoQuery {
+    contract: string,
+    supplier?: string
+}
+
+async function getBales(contract: string, supplier: string | null): Promise<Bale[]> {
+
+    let mongoQuery: BaleMongoQuery = { contract: contract };
+
+    if (supplier !== null) {
+        mongoQuery.supplier = supplier;
+    }
+
+    return await collections.bales!.find<Bale>({ contract: contract }).toArray();
+}
 
 function checkNewBale(bale: BaleCreate): boolean {
     if (bale.supplier === undefined || bale.supplier === "") {
@@ -98,7 +114,9 @@ export async function GET(request: NextRequest) {
                 return NextResponse.json({ bale: bale }, { status: 200 });
             }
 
-            const bales: Bale[] = await collections.bales!.find<Bale>({ contract: token.contract }).toArray();
+            const supplier: string | null = request.nextUrl.searchParams.get("supplier");
+
+            const bales: Bale[] = await getBales(token.contract!, supplier);
 
             return NextResponse.json({ bales: bales }, { status: 200 });
 

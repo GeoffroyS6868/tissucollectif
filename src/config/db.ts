@@ -1,7 +1,7 @@
 import * as mongoDB from "mongodb";
 import * as dotenv from "dotenv";
 
-export const collections: { users?: mongoDB.Collection, contracts?: mongoDB.Collection, bales?: mongoDB.Collection, suppliers?: mongoDB.Collection } = {};
+export const collections: { users?: mongoDB.Collection, contracts?: mongoDB.Collection, bales?: mongoDB.Collection, suppliers?: mongoDB.Collection, clothes?: mongoDB.Collection } = {};
 
 function getDbUrl(): string {
     if (process.env.NODE_ENV == "production") {
@@ -33,6 +33,10 @@ async function createCollectionsIfNotExist(db: mongoDB.Db, collectionsList: (mon
 
     if (await doesCollectionExist(collectionsList, process.env.SUPPLIERS_COLLECTION!) === false) {
         await db.createCollection(process.env.SUPPLIERS_COLLECTION!);
+    }
+
+    if (await doesCollectionExist(collectionsList, process.env.CLOTHES_COLLECTION!) === false) {
+        await db.createCollection(process.env.CLOTHES_COLLECTION!);
     }
 }
 
@@ -66,5 +70,8 @@ export async function connect() {
 
     const suppliersCollection: mongoDB.Collection = db.collection(process.env.SUPPLIERS_COLLECTION!);
     collections.suppliers = suppliersCollection;
+
+    const clothesCollection: mongoDB.Collection = db.collection(process.env.CLOTHES_COLLECTION!);
+    collections.clothes = clothesCollection;
 
 }

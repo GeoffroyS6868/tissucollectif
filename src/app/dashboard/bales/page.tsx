@@ -12,7 +12,7 @@ export default function Bales() {
     const [bales, setBales] = React.useState<Bale[]>([]);
 
     React.useEffect(() => {
-        const checkConnection = async () => {
+        const getBales = async () => {
             try {
                 const response = await axios.get('/api/bales');
 
@@ -23,7 +23,7 @@ export default function Bales() {
             }
         };
 
-        checkConnection();
+        getBales();
     }, [bales]);
 
     return (

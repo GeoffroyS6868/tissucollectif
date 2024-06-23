@@ -12,7 +12,7 @@ export default function Suppliers() {
     const [suppliers, setSuppliers] = React.useState<Supplier[]>([]);
 
     React.useEffect(() => {
-        const checkConnection = async () => {
+        const getSuppliers = async () => {
             try {
                 const response = await axios.get('/api/suppliers');
 
@@ -23,7 +23,7 @@ export default function Suppliers() {
             }
         };
 
-        checkConnection();
+        getSuppliers();
     }, [suppliers]);
 
     return (

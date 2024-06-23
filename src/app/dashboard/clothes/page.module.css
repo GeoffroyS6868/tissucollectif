@@ -1,0 +1,64 @@
+.clothes {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.clothesheader {
+    width: 100%;
+    height: 10vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--white-hover);
+}
+
+.title {
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 2vw;
+    margin-left: 4vw;
+}
+
+.actionlink {
+    width: 7.5vw;
+    height: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--maincolor);
+    color: var(--white);
+    border-color: var(--maincolor);
+    font-family: var(--font-hind);
+    font-weight: 600;
+    font-size: 1.25vw;
+    margin-right: 4vw;
+    border-style: solid;
+    border-width: 0.15vw;
+    border-radius: 0.4vw;
+    text-decoration: none;
+    padding-top: 0.2vw;
+    transition-duration: 0.3s;
+}
+
+.actionlink:hover {
+    background-color: var(--white);
+    color: var(--maincolor);
+    transition-duration: 0.3s;
+}
+
+.clothestable {
+    width: 100%;
+    height: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 1vw;
+}
